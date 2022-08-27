@@ -63,10 +63,10 @@ function FilteredEventsPage() {
   const date = new Date(numYear, numMonth - 1);
 
   return (
-    <>
+    <Fragment>
       <ResultsTitle date={date} />
       <EventList items={filteredEvents} />
-    </>
+    </Fragment>
   );
 }
 
