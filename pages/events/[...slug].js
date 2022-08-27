@@ -5,6 +5,7 @@ import EventList from "../../components/events/event-list";
 import ResultsTitle from "../../components/events/results-title";
 import Button from "../../components/ui/button";
 import ErrorAlert from "../../components/ui/error-alert";
+import { Fragment } from "react";
 
 function FilteredEventsPage() {
   const router = useRouter();
@@ -30,14 +31,14 @@ function FilteredEventsPage() {
     numMonth > 12
   ) {
     return (
-      <>
+      <Fragment>
         <ErrorAlert>
           <p>Invalid filter. Please adjust your values!</p>
         </ErrorAlert>
         <div className="center">
           <Button link="/events">Show All Events</Button>
         </div>
-      </>
+      </Fragment>
     );
   }
 
