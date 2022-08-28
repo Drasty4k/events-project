@@ -1,7 +1,7 @@
 function handler(req, res) {
   const eventId = req.query.eventId;
 
-  if (req.methods === "POST") {
+  if (req.method === "POST") {
     const { email, name, text } = req.body;
 
     if (
@@ -27,7 +27,7 @@ function handler(req, res) {
     res.status(201).json({ message: "Added comment.", comment: newComment });
   }
 
-  if (req.methods === "GET") {
+  if (req.method === "GET") {
     const dummyList = [
       { id: "c1", name: "Dragos", text: "A first comment!" },
       { id: "c2", name: "Max", text: "A second comment!" },
