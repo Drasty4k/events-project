@@ -9,7 +9,6 @@ import Comments from "../../components/input/comments";
 
 function EventDetailPage(props) {
   const event = props.selectedEvent;
-  console.log(event);
 
   if (!event) {
     return (
@@ -57,7 +56,6 @@ export async function getStaticPaths() {
   const events = await getFeaturedEvents();
 
   const paths = events.map((event) => ({ params: { eventId: event.id } }));
-  console.log(paths);
 
   return {
     paths: paths,
